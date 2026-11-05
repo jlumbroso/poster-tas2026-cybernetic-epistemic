@@ -14,4 +14,8 @@ at a pinned commit; one private, described) and the paper's own public
 record (free-disk-space ADR-0007). No build step; GitHub Pages serves the
 repository root.
 
+Status line on the page is dated; when results of the reconstruction test
+exist, the line is updated with a new date and the old one kept, so the
+page shows its status history.
+
 Poster drafted with Claude Fable 5.1 and the author.
