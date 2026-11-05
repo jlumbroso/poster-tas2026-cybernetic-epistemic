@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cybernetic and Epistemic — poster, TAS 2026</title>
+<meta name="description" content="Companion page for the TAS 2026 poster of 'Cybernetic and Epistemic: A Missing Vocabulary for Trustworthy Agentic Delegation' (Lumbroso, arXiv:2610.00961): the poster PDF, the paper, and the records the poster quotes.">
+<style>
+  :root { --ink:#14181F; --mute:#525A66; --rule:#B9C0CC; --cond:#2F6B4F; --cost:#A9560F; --bg:#FFFFFF; --panel:#F0F2F6; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink:#E8E6E1; --mute:#A3A9B3; --rule:#3A414B; --bg:#15171A; --panel:#1E2126; --cond:#7FC19E; --cost:#E0A06A; } }
+  :root[data-theme="dark"] { --ink:#E8E6E1; --mute:#A3A9B3; --rule:#3A414B; --bg:#15171A; --panel:#1E2126; --cond:#7FC19E; --cost:#E0A06A; }
+  html { background:var(--bg); }
+  body { margin:0; padding:24px 16px 48px; color:var(--ink); background:var(--bg); font:17px/1.55 "Source Sans 3","Source Sans Pro",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif; max-width:820px; margin-inline:auto; }
+  h1 { font-size:1.9rem; line-height:1.15; margin:0 0 .25rem; }
+  .sub { color:var(--mute); margin:0 0 1.25rem; }
+  h2 { font-size:1.1rem; margin:2rem 0 .5rem; letter-spacing:.02em; text-transform:uppercase; color:var(--mute); }
+  a { color:var(--cond); }
+  .card { background:var(--panel); border-radius:8px; padding:14px 16px; margin:.5rem 0; }
+  .card b { display:block; margin-bottom:.15rem; }
+  .poster img { width:100%; height:auto; border:1px solid var(--rule); border-radius:6px; display:block; }
+  .meta { color:var(--mute); font-size:.95rem; }
+  code { font-family:"Source Code Pro",ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.92em; }
+  footer { margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--rule); color:var(--mute); font-size:.9rem; }
+  ul { padding-left:1.2rem; }
+</style>
+</head>
+<body>
+<h1>Cybernetic and Epistemic: A Missing Vocabulary for Trustworthy Agentic Delegation</h1>
+<p class="sub">Jérémie Lumbroso, University of Pennsylvania · poster at TAS 2026 (Trustworthy Agentic Systems), an AAAI 2026 Fall Symposium, Arlington, VA · Friday, November 6, 2026, 3:00–4:00 pm</p>
+
+<h2>The poster</h2>
+<div class="card poster">
+  <a href="poster.pdf"><img src="poster-preview.png" alt="Preview of the poster: a landscape sheet with a thesis line, three definition cards, and four numbered columns"></a>
+  <p><a href="poster.pdf"><b>Download the poster (PDF, 40 × 30 in)</b></a></p>
+  <p class="meta">One mechanic, rehearsed four times: change one fact in a decision's record and see whether the record moves. Step 1 is an everyday example; step 2 the same thing as a five-slot record; steps 3 and 4 two real records, one whose <i>If wrong</i> slot holds a condition and one whose slot holds a price.</p>
+</div>
+
+<h2>The paper</h2>
+<div class="card">
+  <b><a href="https://arxiv.org/abs/2610.00961">arXiv:2610.00961</a></b>
+  <span class="meta">Accepted at TAS 2026 (AAAI Fall Symposium Series). DOI <a href="https://doi.org/10.48550/arXiv.2610.00961">10.48550/arXiv.2610.00961</a>.</span>
+  <p>The paper proposes that every consequential choice in a delegation channel should carry the condition under which it would have gone otherwise, in a form a third party can test, and gives the criterion an operational form: a two-part reconstruction test, and a deliberation-recording convention (ORRCF) that makes the condition a required component of every recorded choice.</p>
+  <p class="meta">Status, in the paper's words: the reconstruction test has not been run on any case here, including the one worked in §4. It is a position paper.</p>
+</div>
+
+<h2>The records quoted on the poster</h2>
+<div class="card">
+  <b>Record 3 — <a href="https://github.com/jlumbroso/porthole/blob/4f8e92c/docs/adr/0009-ship-as-a-personal-vsix.md">porthole, ADR-0009, question <code>QST-MARKETPLACE</code></a></b>
+  <span class="meta">Public. Quoted at commit <code>4f8e92c</code>. Written by an AI collaborator (Claude Opus 5.5), October 2026. Its <i>If wrong</i> clause names a condition; the same file shows the collaborator revising its recommendation when that condition's first half arrived, and the author then choosing differently.</span>
+</div>
+<div class="card">
+  <b>Record 4 — a planning record of the author's own seminar</b>
+  <span class="meta">Private; one question block quoted with names removed; not a case reported in the paper. Its <i>If wrong</i> clause states a price ("four people wait a few extra hours for good news"), not a condition.</span>
+</div>
+<div class="card">
+  <b>The paper's own public record — <a href="https://github.com/lumbroso-commons/free-disk-space/blob/36e9a5af4eddb91fc11aec4c6f6f79b3cc0cb523/docs/adr/0007-swap-storage-defaults-to-false-the-policy-acquires-a-boundary.md">free-disk-space, ADR-0007</a></b>
+  <span class="meta">Section 3.4 of the paper: a recommendation withdrawn on its own stated terms, the correction kept in place. Quoted at commit <code>36e9a5a</code>. The repository is the author's.</span>
+</div>
+
+<h2>The convention</h2>
+<div class="card">
+  <b><a href="https://adrs.systems/orrcf/">ORRCF — Options, Recommendation, Rationale, Confidence, Falsifier</a></b>
+  <span class="meta">The five-slot form the poster's step 2 uses; the falsifier is the evidence, observation, failed prediction, or changed constraint that would cause the recommendation to be revised.</span>
+</div>
+
+<h2>Author</h2>
+<ul>
+  <li><a href="https://github.com/jlumbroso/">github.com/jlumbroso</a></li>
+  <li><a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9mie-lumbroso/">LinkedIn</a></li>
+</ul>
+
+<footer>
+  Poster drafted with Claude Fable 5.1 and the author; quotations verified against the source files at the commits linked above. This page: <code>https://jlumbroso.github.io/poster-tas2026-cybernetic-epistemic/</code>. Repository: <a href="https://github.com/jlumbroso/poster-tas2026-cybernetic-epistemic">https://github.com/jlumbroso/poster-tas2026-cybernetic-epistemic</a>.
+</footer>
+</body>
+</html>
